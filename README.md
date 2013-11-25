@@ -46,7 +46,7 @@ gopro/
 
 ## Bugs and feature requests
 
-If you've found a **new** bug or a want to suggest a **new** feature request, [please open a new issue](https://github.com/chrisgwgreen/GoPro-API/issues).
+If you've found a **new** bug or a want to suggest a **new** feature request, please feel free to [open a new issue](https://github.com/chrisgwgreen/GoPro-API/issues).
 
 ## Documentation
 
