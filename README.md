@@ -1,4 +1,4 @@
-# [GoPro API](http://g-w-g.co.uk) [![devDependency Status](https://david-dm.org/chrisgwgreen/GoPro-API.png)](https://david-dm.org/chrisgwgreen/GoPro-API)
+# [GoPro Hero 3 - API](http://g-w-g.co.uk) [![devDependency Status](https://david-dm.org/chrisgwgreen/GoPro-API.png)](https://david-dm.org/chrisgwgreen/GoPro-API)
 
 Control you GoPro camera remotely with the Node.js GoPro API. Aiming to be the most comprehensive api possible; you can access a wide array of settings, power your device on or off and, most importantly, backup your videos/images remotely over wifi. Created and maintained by [Chris GW Green](http://g-w-g.co.uk).
 
@@ -80,7 +80,7 @@ For more information on SemVer, please visit <http://semver.org/>.
 
 **Chris GW Green**
 
-+ <http://g-w-g.co.uk/mdo>
++ <http://g-w-g.co.uk/>
 
 ## Copyright and license
 
