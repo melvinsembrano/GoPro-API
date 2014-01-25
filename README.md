@@ -1,11 +1,11 @@
 # [GoPro Hero 3 - API](http://g-w-g.co.uk) [![devDependency Status](https://david-dm.org/chrisgwgreen/GoPro-API.png)](https://david-dm.org/chrisgwgreen/GoPro-API)
 
-Control you GoPro camera remotely with the Node.js GoPro API. Aiming to be the most comprehensive api possible; you can access a wide array of settings, power your device on or off and, most importantly, backup your videos/images remotely over wifi. Created and maintained by [Chris GW Green](http://g-w-g.co.uk).
+Control you GoPro camera via wifi via this comprehensive Node.js API. With access to a wide array of settings; you can power your device on or off and alter settings dynamically and backup your videos/images remotely.
 
 
 ## Getting started
 
-Three quick start options are available:
+To get started, there are three quick start options available:
 
 * [Download the latest release](https://github.com/chrisgwgreen/GoPro-API/archive/master.zip).
 * Clone the repo: `git clone https://github.com/chrisgwgreen/GoPro-API.git`.
@@ -13,7 +13,6 @@ Three quick start options are available:
 
 Please see details below for details about how to use this API.
 
-Documentation coming soon.
 
 ## Update GoPro
 
