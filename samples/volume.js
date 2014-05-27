@@ -1,6 +1,6 @@
 /*global require, console*/
 
-//Activate protune (on device look for the tiny 'T')
+//Get the current status of the GoPro
 
 (function () {
 
@@ -8,11 +8,12 @@
 
     var config = require('../config'),
         GoPro = require('../libs/gopro'),
+        Volume = GoPro.Volume,
         camera = new GoPro(config.password, config.ip, config.port);
 
     camera.ready().then(function () {
 
-        camera.protune(false).then(function () {
+        camera.setVolume(Volume.MUTE).then(function () {
             camera.status().then(function (status) {
                 console.log(status);
             }).catch(function (error) {

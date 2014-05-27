@@ -1,6 +1,7 @@
 /*global require, console*/
 
-//Activate protune (on device look for the tiny 'T')
+//Set device's Field Of Vision
+//FieldOfVision = { WIDE: 0, MEDIUM: 1, NARROW: 2 };
 
 (function () {
 
@@ -12,7 +13,7 @@
 
     camera.ready().then(function () {
 
-        camera.protune(false).then(function () {
+        camera.setFieldOfVision(GoPro.FieldOfVision.WIDE).then(function () {
             camera.status().then(function (status) {
                 console.log(status);
             }).catch(function (error) {

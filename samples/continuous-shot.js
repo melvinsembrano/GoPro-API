@@ -1,6 +1,7 @@
 /*global require, console*/
 
-//Activate protune (on device look for the tiny 'T')
+//Sets the devices Continuous Shot mode
+// ContinuousShot = { SINGLE: 0, THREE_SPS: 3, FIVE_SPS: 5, TEN_SPS: 'a' };
 
 (function () {
 
@@ -12,7 +13,7 @@
 
     camera.ready().then(function () {
 
-        camera.protune(false).then(function () {
+        camera.setContinuousShot(GoPro.ContinuousShot.FIVE_SPS).then(function () {
             camera.status().then(function (status) {
                 console.log(status);
             }).catch(function (error) {

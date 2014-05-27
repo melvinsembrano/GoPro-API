@@ -1,6 +1,7 @@
 /*global require, console*/
 
-//Activate protune (on device look for the tiny 'T')
+// Sets the device's loop setting
+//LoopVideo = { OFF: 0, MIN_5: 1, MIN_20: 2, MIN_60: 3, MAX: 5 };
 
 (function () {
 
@@ -12,7 +13,7 @@
 
     camera.ready().then(function () {
 
-        camera.protune(false).then(function () {
+        camera.setLoopVideo(GoPro.LoopVideo.OFF).then(function () {
             camera.status().then(function (status) {
                 console.log(status);
             }).catch(function (error) {

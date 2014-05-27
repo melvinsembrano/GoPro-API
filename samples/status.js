@@ -1,11 +1,25 @@
-var when = require('when');
-var config = require('../config');
-var GoPro = require('../libs/gopro');
-var camera = new GoPro(config.password);
+/*global require, console*/
 
-camera.ready().then(function(){
-	//Status 
-	camera.status().then(function(a){
-		console.log(a)
-	})
-});
+//Get the current status of the GoPro
+
+(function () {
+
+    'use strict';
+
+    var config = require('../config'),
+        GoPro = require('../libs/gopro'),
+        camera = new GoPro(config.password, config.ip, config.port);
+
+    camera.ready().then(function () {
+
+        camera.status().then(function (status) {
+            console.log(status);
+        }).catch(function (error) {
+            console.log(error.message);
+        });
+
+    }).catch(function (error) {
+        console.log(error.message);
+    });
+
+}());

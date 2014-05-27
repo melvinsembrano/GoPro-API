@@ -1,6 +1,7 @@
 /*global require, console*/
 
-//Activate protune (on device look for the tiny 'T')
+//Sets the device's AutoPowerOff state
+//AutoPowerOff = { NEVER: 0, SECONDS_60: 1, SECONDS_120: 2, SECONDS_300: 3 }
 
 (function () {
 
@@ -12,7 +13,7 @@
 
     camera.ready().then(function () {
 
-        camera.protune(false).then(function () {
+        camera.setAutoPowerOff(GoPro.AutoPowerOff.NEVER).then(function () {
             camera.status().then(function (status) {
                 console.log(status);
             }).catch(function (error) {
