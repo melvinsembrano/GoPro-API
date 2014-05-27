@@ -1,5 +1,4 @@
 var config = {};
-
 //Default password - 'goprohero'
 config.password = 'goprohero'; 
 
