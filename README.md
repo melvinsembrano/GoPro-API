@@ -27,16 +27,27 @@ gopro/
 ├── libs/
 │   ├── gopro.js
 ├── samples/
-│   ├── autopower.js
-│   ├── cameramode_status.js
+│   ├── proto-booth.js
+│   ├── auto-power-off.js
+│   ├── burst-rate.js
+│   ├── camera-mode-status.js
+│   ├── capture.js
+│   ├── continuous-shot.js
+│   ├── delete-all.js
 │   ├── download-latest.js
-│   ├── filesystem.js
-│   ├── photoresolution_status.js
+│   ├── field-of-vision.js
+│   ├── file-system.js
+│   ├── led.js
+│   ├── loop-video.js
+│   ├── photo-resolution-status.js
 │   ├── power.js
 │   ├── protune.js
 │   ├── status.js
-│   └── videoresolution_status.js
+│   ├── video-resolution-status.js
+│   ├── volume.js
+│   └── white-black.js
 ├── README.md
+├── LICENSE
 ├── config.js
 └── package.json
 ```
@@ -53,16 +64,29 @@ To handle the asynchronous behaviour of accessing the GoPro remotely, this API i
 As such, the basic usage of this API is as follows:
 
 ```javascript
-	var when = require('when');
-	var config = require('./config');
-	var GoPro = require('./libs/gopro');
-	var camera = new GoPro(config.password);
 
-	camera.power(true).then(function(){
-		camera.status().then(function(a){
-			console.log(a)
-		});
-	});
+(function () {
+
+    'use strict';
+
+    var config = require('../config'),
+        GoPro = require('../libs/gopro'),
+        camera = new GoPro(config.password, config.ip, config.port);
+
+    camera.ready().then(function () {
+
+        camera.status().then(function (status) {
+            console.log(status);
+        }).catch(function (error) {
+            console.log(error.message);
+        });
+
+    }).catch(function (error) {
+        console.log(error.message);
+    });
+
+}());
+
 ```
 
 This snippet turns your device then, once the device is ready, requests it's status which is finally console logged.
@@ -73,7 +97,7 @@ Please see [samples folder](https://github.com/chrisgwgreen/GoPro-API/tree/maste
 
 ## API
 
-Here goes...
+API will soon be available. In the interim, please refer to the samples directory for examples as to how to use this API.
 
 ## Versioning
 
